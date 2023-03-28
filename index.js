@@ -61,6 +61,13 @@ async function generateReadMe() {
 
   # ${readMeFile.title}
 
+  ## Table of Contents 
+  1. [Description](#description)
+  2. [Installation](#installation)
+  3. [Usage](#usage)
+  4. [Tests](#tests)
+  5. [Questions](#questions)
+
   ## Description 
 
   ${readMeFile.description}
