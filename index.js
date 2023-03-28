@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 
 async function generateReadMe() {
   const readMeFile =
-    inquirer
+   await inquirer
       .prompt([
         {
           type: 'input',
@@ -35,13 +35,35 @@ async function generateReadMe() {
           title: 'tests',
           message: 'Please enter any testing instructions for the project.'
         },
-      ]);
+
+        {
+          type: 'input',
+          title: 'email',
+          message: 'Please enter your email and any additional instructions to contact you.',
+        },
+
+        {
+          type: 'input',
+          title: 'github',
+          message: 'Please enter your github username.',
+        },
+
+        {
+          type:'input',
+          title: 'license',
+          message: 'Please enter a valid license for your project. If you are not sure which one you are using or do not have one, just enter MIT.'
+        }
+  ]);
+
   const readMeContents = `
+  
+  https://img.shields.io/badge/License-${readMeFile.license}-blue.svg
+
   # ${readMeFile.title}
 
   ## Description 
 
-  ${readMeFile.descripion}
+  ${readMeFile.description}
 
   ## Installation 
 
@@ -54,6 +76,11 @@ async function generateReadMe() {
   ##Tests
 
   ${readMeFile.tests}
+
+  ##Questions 
+
+  ${readMeFile.email}
+  Github Profile Link: https://github.com/${readMeFile.github}
   `; 
 
   const callback = function (err) {
