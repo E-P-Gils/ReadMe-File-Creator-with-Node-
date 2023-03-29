@@ -7,50 +7,50 @@ async function generateReadMe() {
       .prompt([
         {
           type: 'input',
-          title: 'title',
+          name: 'title',
           message: 'What is the project title?'
         },
         {
           type: 'input',
-          title: 'description',
+          name: 'description',
           message: 'Please enter a project description'
         },
         {
           type: 'input',
-          title: 'installation',
+          name: 'installation',
           message: 'Please enter the project installation instructions.'
         },
         {
           type: 'input',
-          title: 'usage',
+          name: 'usage',
           message: 'Please enter instructions for the users of the project.'
         },
         {
           type: 'input',
-          title: 'contributing',
+          name: 'contributing',
           message: 'Please enter any contributing guidelines for the project.'
         },
         {
           type: 'input',
-          title: 'tests',
+          name: 'tests',
           message: 'Please enter any testing instructions for the project.'
         },
 
         {
           type: 'input',
-          title: 'email',
+          name: 'email',
           message: 'Please enter your email and any additional instructions to contact you.',
         },
 
         {
           type: 'input',
-          title: 'github',
+          name: 'github',
           message: 'Please enter your github username.',
         },
 
         {
           type:'input',
-          title: 'license',
+          name: 'license',
           message: 'Please enter a valid license for your project. If you are not sure which one you are using or do not have one, just enter MIT.'
         }
   ]);
@@ -97,3 +97,4 @@ async function generateReadMe() {
 }
 
 generateReadMe();
+
