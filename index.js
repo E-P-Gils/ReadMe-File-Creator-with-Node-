@@ -57,7 +57,7 @@ async function generateReadMe() {
 
   const readMeContents = `
   
-  https://img.shields.io/badge/License-${readMeFile.license}-blue.svg
+ ![${readMeFile.license} License](https://img.shields.io/badge/License-${readMeFile.license}-blue.svg)
 
   # ${readMeFile.title}
 
