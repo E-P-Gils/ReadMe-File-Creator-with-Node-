@@ -55,9 +55,15 @@ async function generateReadMe() {
         }
   ]);
 
+  function generateLicense(license) {
+    const url = 'https://img.shields.io/badge/License-';
+    const blue = '-blue.svg';
+    return `${url}${readMeFile.license}${blue}`;
+  }
+
   const readMeContents = `
   
- ![${readMeFile.license} License](https://img.shields.io/badge/License-${readMeFile.license}-blue.svg)
+ ![License](${generateLicense(readMeFile.license)})
 
   # ${readMeFile.title}
 
