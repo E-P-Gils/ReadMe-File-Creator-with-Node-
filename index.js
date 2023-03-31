@@ -86,6 +86,9 @@ async function generateReadMe() {
 
   ${readMeFile.usage}
 
+  ## Contributors 
+  ${readMeFile.contributing}
+
   ## Tests
 
   ${readMeFile.tests}
